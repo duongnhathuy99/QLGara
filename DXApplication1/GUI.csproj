@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DXApplication1</RootNamespace>
     <AssemblyName>DXApplication1</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -68,17 +69,17 @@
     <Compile Include="ChonDV-PT.Designer.cs">
       <DependentUpon>ChonDV-PT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dichvu.cs">
+    <Compile Include="DichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dichvu.Designer.cs">
-      <DependentUpon>Dichvu.cs</DependentUpon>
+    <Compile Include="DichVu.Designer.cs">
+      <DependentUpon>DichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoadon.cs">
+    <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoadon.Designer.cs">
-      <DependentUpon>Hoadon.cs</DependentUpon>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -86,11 +87,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Khachhang.cs">
+    <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Khachhang.Designer.cs">
-      <DependentUpon>Khachhang.cs</DependentUpon>
+    <Compile Include="KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Kho.cs">
       <SubType>Form</SubType>
@@ -121,17 +122,17 @@
     <EmbeddedResource Include="ChonDV-PT.resx">
       <DependentUpon>ChonDV-PT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dichvu.resx">
-      <DependentUpon>Dichvu.cs</DependentUpon>
+    <EmbeddedResource Include="DichVu.resx">
+      <DependentUpon>DichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hoadon.resx">
-      <DependentUpon>Hoadon.cs</DependentUpon>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Khachhang.resx">
-      <DependentUpon>Khachhang.cs</DependentUpon>
+    <EmbeddedResource Include="KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kho.resx">
       <DependentUpon>Kho.cs</DependentUpon>
@@ -154,6 +155,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -165,6 +167,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{f03e5da8-1e91-4e27-a7be-fedcab637a63}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{e7365066-a872-4299-961a-2d4a323dd66c}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DXApplication1
 {
-    public partial class Hoadon : DevExpress.XtraEditors.XtraForm
+    public partial class HoaDon : DevExpress.XtraEditors.XtraForm
     {
-        public Hoadon()
+        public HoaDon()
         {
             InitializeComponent();
         }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DXApplication1
 {
-    public partial class Dichvu : DevExpress.XtraEditors.XtraForm
+    public partial class DichVu : DevExpress.XtraEditors.XtraForm
     {
-        public Dichvu()
+        public DichVu()
         {
             InitializeComponent();
         }

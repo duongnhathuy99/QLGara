@@ -33,7 +33,7 @@ namespace DXApplication1
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Khachhang));
+            OpenChildForm(typeof(KhachHang));
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -48,7 +48,7 @@ namespace DXApplication1
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Dichvu));
+            OpenChildForm(typeof(DichVu));
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -58,7 +58,7 @@ namespace DXApplication1
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Hoadon));
+            OpenChildForm(typeof(HoaDon));
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

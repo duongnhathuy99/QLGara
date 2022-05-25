@@ -10,12 +10,15 @@ namespace BUS
 {
    public class BUS_KhachHang
     {
-        DAL_KhachHang dal_kh = new DAL_KhachHang();
+        DAL_KhachHang dal_kh = new DAL_KhachHang();        
         public List<DTO_KhachHang> select()
         {
             return dal_kh.select();
         }
-
+        public int taoIDKH( )
+        {
+            return dal_kh.slKH();
+        }
         public bool ThemKH(DTO_KhachHang kh)
         {
             return dal_kh.ThemKH(kh);

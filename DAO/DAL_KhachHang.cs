@@ -8,13 +8,13 @@ using System.Data.SqlClient;
 using DTO;
 namespace DAL
 {
-   public class DAL_KhachHang
+    public class DAL_KhachHang
     {
         public List<DTO_KhachHang> select()
         {
-            string s = "select * from KhachHang";
+            string s = "select * from KhachHang";           
             DataTable dt = Connect.ExcecuteQuery(s);
-            List<DTO_KhachHang> list = new List<DTO_KhachHang>();
+            List<DTO_KhachHang> list = new List<DTO_KhachHang>();           
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow row in dt.Rows)
@@ -22,19 +22,31 @@ namespace DAL
                     DTO_KhachHang Kh = new DTO_KhachHang();
                     Kh.MaKH = row["maKH"].ToString();
                     Kh.TenKH = row["tenKH"].ToString();
-                    Kh.DiaChi = row["diaChi"].ToString();
                     Kh.SDT = row["sdt"].ToString();
+                    Kh.DiaChi = row["diaChi"].ToString();
                     Kh.HieuXe = row["hieuXe"].ToString();
-                    Kh.BienSo = row["bienSo"].ToString();                  
+                    Kh.BienSo = row["bienSo"].ToString();
                     list.Add(Kh);
                 }
             }
             return list;
         }
+
+        public int slKH()
+        {
+            string s = "select * from SoLuongID";
+            DataTable dt = Connect.ExcecuteQuery(s);
+            int KH;
+            DataRow row = dt.Rows[0];
+            KH = (int)row["soLuongKH"];
+            return KH;
+        }
         public bool ThemKH(DTO_KhachHang Kh)
         {
-            string s = "INSERT INTO KhachHang VALUES('" + Kh.MaKH + "',N'" + Kh.TenKH + "',N'" + Kh.DiaChi + "','" + Kh.SDT + "','" + Kh.HieuXe + "','" + Kh.BienSo + " ')";
+            string s = "INSERT INTO KhachHang VALUES('" + Kh.MaKH + "',N'" + Kh.TenKH + "',N'" + Kh.DiaChi + "','" + Kh.SDT + "','" + Kh.HieuXe + "','" + Kh.BienSo + " ');";
+            s += "UPDATE SoLuongID SET soLuongKH = soLuongKH + 1";
             return Connect.ExcuteNonQuery(s);
+
         }
         public bool SuaKH(DTO_KhachHang kh)
         {

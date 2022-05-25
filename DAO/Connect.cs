@@ -11,7 +11,7 @@ namespace DAL
 {
     public class Connect
     {
-        private static string s = "Data Source=HUY;Initial Catalog=QLGara;Integrated Security=True";
+        private static string s = "Data Source=huy;Initial Catalog=QLGarage;Integrated Security=True";
         private SqlConnection connect;
         public static DataTable ExcecuteQuery(string sql)
         {

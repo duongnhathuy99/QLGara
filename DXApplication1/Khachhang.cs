@@ -14,16 +14,27 @@ namespace DXApplication1
 {
     public partial class KhachHang : DevExpress.XtraEditors.XtraForm
     {
+        public delegate void TruyenKH(DTO_KhachHang kh);
+        public TruyenKH truyenKH;
         BUS_KhachHang bus_kh = new BUS_KhachHang();
         private bool IsThem = false;
         private bool IsSua = false;
         public KhachHang()
         {
-            InitializeComponent();
+            InitializeComponent();           
+        }
+        public void LayKH(DTO_KhachHang kh)
+        {
+            kh.MaKH = txtMaKH.Text;
+            kh.TenKH = txtTenKH.Text;
+            kh.DiaChi = txtDiaChi.Text;
+            kh.SDT = txtSdt.Text;
+            kh.HieuXe = txtHieuXe.Text;
+            kh.BienSo = txtBienSo.Text;
         }
         private void EnabledTextBox(bool flag)
         {
-            txtMaKH.Enabled = flag;
+            //txtMaKH.Enabled = flag;
             txtTenKH.Enabled = flag;
             txtSdt.Enabled = flag;
             txtDiaChi.Enabled = flag;
@@ -31,8 +42,8 @@ namespace DXApplication1
             txtBienSo.Enabled = flag;
         }
         private void XoaTextBox()
-        {
-            txtMaKH.Text = "";
+        {            
+            txtMaKH.Text ="KH"+ (bus_kh.taoIDKH()+1).ToString();
             txtTenKH.Text = "";
             txtSdt.Text = "";
             txtDiaChi.Text = "";
@@ -64,7 +75,7 @@ namespace DXApplication1
         }
         private void Loadfull()
         {
-            gridKhachHang.DataSource = bus_kh.select();           
+            gridKhachHang.DataSource = bus_kh.select();          
             EnabledTextBox(false);
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
             IsThem = IsSua = false;
@@ -165,8 +176,7 @@ namespace DXApplication1
             {
                 btnSua.Text = "Hủy";
                 EnabledTextBox(true);             
-                IsSua = true;
-                txtMaKH.Enabled = false;
+                IsSua = true;               
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
                 btnCapNhat.Enabled = true;
@@ -182,5 +192,21 @@ namespace DXApplication1
                 IsSua = false;
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            DTO_KhachHang kh = new DTO_KhachHang();
+            kh.MaKH = txtMaKH.Text;
+            kh.TenKH = txtTenKH.Text;
+            kh.DiaChi = txtDiaChi.Text;
+            kh.SDT = txtSdt.Text;
+            kh.HieuXe = txtHieuXe.Text;
+            kh.BienSo = txtBienSo.Text;
+            truyenKH(kh);
+        }
+
+        
     }
+        
+    
 }

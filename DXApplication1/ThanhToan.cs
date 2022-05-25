@@ -11,13 +11,11 @@ using System.Windows.Forms;
 
 namespace DXApplication1
 {
-    public partial class Nhanvien : DevExpress.XtraEditors.XtraForm
+    public partial class ThanhToan : DevExpress.XtraEditors.XtraForm
     {
-        public Nhanvien()
+        public ThanhToan()
         {
             InitializeComponent();
         }
-
-       
     }
 }

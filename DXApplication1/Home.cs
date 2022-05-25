@@ -6,64 +6,111 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DTO;
 
 namespace DXApplication1
 {
     public partial class Home : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Home()
+         DTO_NhanVien nv = new DTO_NhanVien();
+        public Home(DTO_NhanVien Nv)
         {
             InitializeComponent();
-
+            lbTen.Text += Nv.TenNV;
+            nv = Nv;
         }
-        private void OpenChildForm(Type typeForm)
+        public void OpenChildForm(Form f)
         {
             foreach (Form frm in MdiChildren)
             {
-                if (frm.GetType() == typeForm)
-                {
+                if (frm.Name == f.Name)
+                {      
                     frm.Activate();
                     return;
                 }
-            }
-            Form f = (Form)Activator.CreateInstance(typeForm);
+            }                 
             f.MdiParent = this;
-            f.Show();
+            f.Show();         
         }
-
+        public void OpenPhieuSuaChua(DTO_KhachHang kh)
+        {
+            foreach (Form frm in MdiChildren)
+            {
+                if (frm.Name == "Phieusuachua")
+                {
+                    frm.Dispose();                 
+                }
+            }
+            Phieusuachua f = new Phieusuachua();
+            f.laykh(kh);
+            OpenChildForm(f);            
+        }
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(KhachHang));
+            KhachHang f = new KhachHang();
+            OpenChildForm(f);
+            f.truyenKH = new KhachHang.TruyenKH(OpenPhieuSuaChua);         
         }
-
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Phieusuachua));
+            Phieusuachua f = new Phieusuachua();       
+            OpenChildForm(f);           
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Kho));
+            Kho f = new Kho();
+
+            OpenChildForm(f);
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(DichVu));
+            DichVu f = new DichVu();
+
+            OpenChildForm(f);
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Nhanvien));
+            Nhanvien f = new Nhanvien();
+
+            OpenChildForm(f);
         }
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(HoaDon));
+            ThanhToan f = new ThanhToan();
+
+            OpenChildForm(f);
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            OpenChildForm(typeof(Nhapphutung));
+            Nhapphutung f = new Nhapphutung();
+
+            OpenChildForm(f);
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //DangNhap dn=new DangNhap();          
+            this.Close();
+            //dn.Show();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            NhaCungCap f = new NhaCungCap();
+
+            OpenChildForm(f);          
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            HoaDon f = new HoaDon();
+
+            OpenChildForm(f);          
         }
     }
 }

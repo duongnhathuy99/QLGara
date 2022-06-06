@@ -135,7 +135,7 @@ namespace DXApplication1
             this.gridKhachHang.TabIndex = 4;
             this.gridKhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewKH,
-            this.bandedGridView1});           
+            this.bandedGridView1});
             // 
             // gridViewKH
             // 
@@ -247,6 +247,7 @@ namespace DXApplication1
             this.txtSdt.Enabled = false;
             this.txtSdt.Location = new System.Drawing.Point(615, 93);
             this.txtSdt.Name = "txtSdt";
+            this.txtSdt.Properties.MaxLength = 11;
             this.txtSdt.Size = new System.Drawing.Size(314, 20);
             this.txtSdt.StyleController = this.layoutControl1;
             this.txtSdt.TabIndex = 5;

@@ -15,6 +15,7 @@ namespace DTO
         public string TenNV { get; set; }
         public string MaCV { get; set; }
         public string Email { get; set; }
+        public string TenCV { get; set; }
 
     }
 }

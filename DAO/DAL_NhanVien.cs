@@ -12,7 +12,10 @@ namespace DAL
     {
         public List<DTO_NhanVien> select()
         {
-            string s = "select * from NhanVien";
+            string s = "select nv.taiKhoan, nv.tenNV, nv.sdt, nv.diaChi, nv.email, nv.matKhau, cv.TenCV";
+            s += " from NhanVien nv,ChucVu cv";
+            s += " where nv.maCV = cv.maCV";
+            //  string s = "select * from NhanVien";
             DataTable dt = Connect.ExcecuteQuery(s);
             List<DTO_NhanVien> list = new List<DTO_NhanVien>();
             if (dt.Rows.Count > 0)
@@ -25,7 +28,7 @@ namespace DAL
                     Nv.SDT = row["sdt"].ToString();
                     Nv.DiaChi = row["diaChi"].ToString();
                     Nv.MatKhau = row["matKhau"].ToString();
-                    Nv.MaCV = row["maCV"].ToString();
+                    Nv.TenCV = row["TenCV"].ToString();
                     Nv.Email = row["email"].ToString();
                     list.Add(Nv);
                 }
@@ -53,6 +56,34 @@ namespace DAL
                 }
             }
             return nv;
+        }
+        /*public int slNV()
+        {
+            string s = "select * from SoLuongID";
+            DataTable dt = Connect.ExcecuteQuery(s);
+            int NV;
+            DataRow row = dt.Rows[0];
+            NV = (int)row["soLuongNV"];
+            return NV;
+        }*/
+        public bool ThemNV(DTO_NhanVien Nv)
+        {
+            string s = "INSERT INTO NhanVien VALUES('" + Nv.TaiKhoan + "','" + Nv.MatKhau + "',N'" + Nv.TenNV + "','" + Nv.SDT + "',N'" + Nv.DiaChi + "','" + Nv.Email + "','" + Nv.MaCV + " ');";
+           // s += "UPDATE SoLuongID SET soLuongNV = soLuongNV + 1";
+            return Connect.ExcuteNonQuery(s);
+
+        }
+        public bool SuaNV(DTO_NhanVien Nv)
+        {
+            string s = "UPDATE NhanVien";
+            s += " SET matKhau='" + Nv.MatKhau + "',tenNV=N'" + Nv.TenNV + "',sdt='" + Nv.SDT + "',diaChi=N'" + Nv.DiaChi + "',email='" + Nv.Email + "',maCV='" + Nv.MaCV + "'";
+            s += " WHERE taiKhoan = '" + Nv.TaiKhoan + "'";
+            return Connect.ExcuteNonQuery(s);
+        }
+        public bool XoaNV(string TaiKhoan)
+        {
+            string s = "delete NhanVien where TaiKhoan ='" + TaiKhoan + "'";
+            return Connect.ExcuteNonQuery(s);
         }
     }
 }

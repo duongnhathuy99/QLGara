@@ -19,6 +19,22 @@ namespace BUS
         {
             return dal_nv.checkTaiKhoan(nv);
         }
-        
+       /* public int taoIDNV()
+        {
+            return dal_nv.slNV();
+        }*/
+        public bool ThemNV(DTO_NhanVien nv)
+        {
+            return dal_nv.ThemNV(nv);
+        }
+        public bool SuaNV(DTO_NhanVien nv)
+        {
+            return dal_nv.SuaNV(nv);
+        }
+        public bool XoaNV(string TaiKhoan)
+        {
+            return dal_nv.XoaNV(TaiKhoan);
+        }
+
     }
 }

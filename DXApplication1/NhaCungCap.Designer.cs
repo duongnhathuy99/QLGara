@@ -228,6 +228,7 @@ namespace DXApplication1
             // 
             this.txtSdt.Location = new System.Drawing.Point(599, 93);
             this.txtSdt.Name = "txtSdt";
+            this.txtSdt.Properties.MaxLength = 11;
             this.txtSdt.Size = new System.Drawing.Size(253, 20);
             this.txtSdt.StyleController = this.layoutControl1;
             this.txtSdt.TabIndex = 8;

@@ -34,7 +34,6 @@ namespace DXApplication1
         }
         private void EnabledTextBox(bool flag)
         {
-            //txtMaKH.Enabled = flag;
             txtTenKH.Enabled = flag;
             txtSdt.Enabled = flag;
             txtDiaChi.Enabled = flag;
@@ -74,7 +73,7 @@ namespace DXApplication1
             }
         }
         private void Loadfull()
-        {
+        {                       
             gridKhachHang.DataSource = bus_kh.select();          
             EnabledTextBox(false);
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;

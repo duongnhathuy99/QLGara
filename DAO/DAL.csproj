@@ -50,6 +50,7 @@
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_NhapPhuTung.cs" />
     <Compile Include="DAL_PhieuSuaChua.cs" />
     <Compile Include="DAL_PhuTung.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

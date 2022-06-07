@@ -31,5 +31,9 @@ namespace BUS
         {
             return dal_ncc.XoaNCC(MaNCC);
         }
+        public string getMaNCC(string Ten)
+        {
+            return dal_ncc.getMaNCC(Ten);
+        }
     }
 }

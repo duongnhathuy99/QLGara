@@ -58,5 +58,19 @@ namespace DAL
             string s = "delete NhaCungCap where maNCC ='" + MaNCC + "'";
             return Connect.ExcuteNonQuery(s);
         }
+        public string getMaNCC(string NCC)
+        {
+            string s = "select ncc.*";
+                   s+= " from NhaCungCap ncc";
+                   s+=" where ncc.tenNCC = N'"+ NCC +"'";
+            DataTable dt = Connect.ExcecuteQuery(s);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                NCC = row["maNCC"].ToString();
+                return NCC;
+            }
+            return "qsq";
+        }
     }
 }

@@ -40,7 +40,6 @@ namespace DXApplication1
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -72,7 +71,6 @@ namespace DXApplication1
             this.barButtonItem6,
             this.skinRibbonGalleryBarItem1,
             this.barButtonItem7,
-            this.barButtonItem8,
             this.barButtonItem10,
             this.barButtonItem9});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
@@ -151,15 +149,6 @@ namespace DXApplication1
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "Nhập Kho";
-            this.barButtonItem8.Id = 9;
-            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
-            // 
             // barButtonItem10
             // 
             this.barButtonItem10.Caption = "Hóa đơn";
@@ -200,7 +189,6 @@ namespace DXApplication1
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
@@ -286,7 +274,6 @@ namespace DXApplication1
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;

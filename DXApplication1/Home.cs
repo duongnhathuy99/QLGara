@@ -83,20 +83,11 @@ namespace DXApplication1
             ThanhToan f = new ThanhToan();
 
             OpenChildForm(f);
-        }
-
-        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Nhapphutung f = new Nhapphutung();
-
-            OpenChildForm(f);
-        }
+        }    
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            //DangNhap dn=new DangNhap();          
-            this.Close();
-            //dn.Show();
+        {                   
+            this.Close();           
         }
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -78,7 +78,7 @@ namespace DXApplication1
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1141, 158);
+            this.ribbonControl1.Size = new System.Drawing.Size(1218, 158);
             // 
             // barButtonItem1
             // 
@@ -240,7 +240,7 @@ namespace DXApplication1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 611);
+            this.ClientSize = new System.Drawing.Size(1218, 692);
             this.Controls.Add(this.lbTen);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;

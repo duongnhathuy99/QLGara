@@ -10,26 +10,31 @@ namespace DAL
 {
    public class DAL_PhieuSuaChua
     {
-        /*public List<DTO_NhapPhuTung> select()
+        public List<DTO_PhieuSuaChua> select1()
         {
-            string s = "select * from NhapPhuTung";
+            string s = "select p.MaPSC,k.tenKH,k.sdt,k.bienSo,k.hieuXe,p.tienSuaChua,p.TrangThaiThanhToan";
+            s += " from PhieuSuaChua p, KhachHang k";
+            s += " where p.MaKH=k.maKH and p.TrangThaiThanhToan=N'Chưa Thanh Toán'";
             DataTable dt = Connect.ExcecuteQuery(s);
-            List<DTO_NhapPhuTung> list = new List<DTO_NhapPhuTung>();
+            List<DTO_PhieuSuaChua> list = new List<DTO_PhieuSuaChua>();
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow row in dt.Rows)
-                {
-                    DTO_NhapPhuTung Npt = new DTO_NhapPhuTung();
-                    Npt.MaNhap = row["maNhap"].ToString();
-                    Npt.TaiKhoan = row["taiKhoan"].ToString();
-                    Npt.NgayNhap = DateTime.Parse(row["ngayNhap"].ToString());
-                    Npt.MaNCC = row["maNCC"].ToString();
-                    Npt.TienNhap = int.Parse(row["tienNhap"].ToString());
-                    list.Add(Npt);
+                {                   
+                    DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
+                    DTO_KhachHang kh = new DTO_KhachHang();
+                    psc.MaPhieu = row["MaPSC"].ToString();
+                    psc.TienSuaChua = int.Parse(row["tienSuaChua"].ToString());                    
+                    kh.TenKH = row["tenKH"].ToString();
+                    kh.SDT = row["sdt"].ToString();
+                    kh.HieuXe = row["hieuXe"].ToString();
+                    kh.BienSo = row["bienSo"].ToString();
+                    psc.KhachHang = kh;
+                    list.Add(psc);
                 }
             }
             return list;
-        }*/
+        }
 
         public int slPSC()
         {
@@ -42,7 +47,7 @@ namespace DAL
         }
         public bool ThemPSC(DTO_PhieuSuaChua psc)
         {
-            string s = "INSERT INTO PhieuSuaChua VALUES('" + psc.MaPhieu + "','" + psc.NgayLapPhieu + "','" + psc.NgayBanGiao + "',N'" + psc.GhiChu + "','" + psc.TienSuaChua + "',N'" + psc.TrangThaiThanhToan + "','" + psc.TaiKhoan + "','" + psc.MaKH + " ');";
+            string s = "INSERT INTO PhieuSuaChua VALUES('" + psc.MaPhieu + "','" + psc.NgayLapPhieu + "','" + psc.NgayBanGiao + "',N'" + psc.GhiChu + "','" + psc.TienSuaChua + "',N'" + psc.TrangThaiThanhToan + "','" + psc.TaiKhoan + "','" + psc.KhachHang.MaKH + "');";
             s += " UPDATE SoLuongID SET soLuongPSC = soLuongPSC + 1";
             return Connect.ExcuteNonQuery(s);
 

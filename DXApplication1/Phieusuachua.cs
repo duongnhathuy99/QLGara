@@ -99,7 +99,9 @@ namespace DXApplication1
             if (int.Parse(txtTongTien.Text) >0 && txtTenKH.Text!="" && dateBanGiao.DateTime > dateLapPhieu.DateTime)
             {
                 DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
-                psc.MaKH = txtMaKH.Text;
+                DTO_KhachHang kh = new DTO_KhachHang();
+                kh.MaKH = txtMaKH.Text;
+                psc.KhachHang = kh;
                 psc.MaPhieu = txtMaPhieu.Text;
                 psc.NgayBanGiao = DateTime.Parse(dateBanGiao.Text);
                 psc.NgayLapPhieu = DateTime.Parse(dateLapPhieu.Text);

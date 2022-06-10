@@ -10,7 +10,7 @@ namespace DTO
     {
         public string MaPhieu { get; set; }
         public string TaiKhoan { get; set; }
-        public string MaKH { get; set; }
+        public DTO_KhachHang KhachHang { get; set; }
         public DateTime NgayLapPhieu { get; set; }
         public int TienSuaChua { get; set; }    
         public string TrangThaiThanhToan { get; set; }

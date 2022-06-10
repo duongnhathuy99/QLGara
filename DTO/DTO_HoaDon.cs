@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class DTO_HoaDon
+    public class DTO_HoaDon
     {
+        public string MaHD { get; set; }
+        public string TaiKhoan { get; set; }       
+        public DateTime NgayThanhToan { get; set; }
+        public string HinhThucThanhToan { get; set; }      
+        public DTO_PhieuSuaChua PhieuSuaChua { get; set; }
     }
 }

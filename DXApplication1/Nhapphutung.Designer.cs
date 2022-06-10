@@ -67,6 +67,7 @@ namespace DXApplication1
             this.txtThuongHieu = new DevExpress.XtraEditors.TextEdit();
             this.txtGiaNhap = new DevExpress.XtraEditors.SpinEdit();
             this.txtGiaBan = new DevExpress.XtraEditors.SpinEdit();
+            this.txtSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -79,6 +80,7 @@ namespace DXApplication1
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -88,8 +90,6 @@ namespace DXApplication1
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtSoLuong = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -110,6 +110,7 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.txtThuongHieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -122,6 +123,7 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
@@ -131,8 +133,6 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             this.SuspendLayout();
             // 
@@ -270,7 +270,7 @@ namespace DXApplication1
             this.ColumnNhapMaPT.OptionsColumn.AllowEdit = false;
             this.ColumnNhapMaPT.Visible = true;
             this.ColumnNhapMaPT.VisibleIndex = 0;
-            this.ColumnNhapMaPT.Width = 76;
+            this.ColumnNhapMaPT.Width = 70;
             // 
             // ColumnNhapTenPT
             // 
@@ -280,7 +280,7 @@ namespace DXApplication1
             this.ColumnNhapTenPT.OptionsColumn.AllowEdit = false;
             this.ColumnNhapTenPT.Visible = true;
             this.ColumnNhapTenPT.VisibleIndex = 1;
-            this.ColumnNhapTenPT.Width = 76;
+            this.ColumnNhapTenPT.Width = 150;
             // 
             // ColumnNhapXuatXu
             // 
@@ -290,7 +290,7 @@ namespace DXApplication1
             this.ColumnNhapXuatXu.OptionsColumn.AllowEdit = false;
             this.ColumnNhapXuatXu.Visible = true;
             this.ColumnNhapXuatXu.VisibleIndex = 2;
-            this.ColumnNhapXuatXu.Width = 76;
+            this.ColumnNhapXuatXu.Width = 65;
             // 
             // ColumnNhapThuongHieu
             // 
@@ -300,7 +300,7 @@ namespace DXApplication1
             this.ColumnNhapThuongHieu.OptionsColumn.AllowEdit = false;
             this.ColumnNhapThuongHieu.Visible = true;
             this.ColumnNhapThuongHieu.VisibleIndex = 3;
-            this.ColumnNhapThuongHieu.Width = 76;
+            this.ColumnNhapThuongHieu.Width = 65;
             // 
             // ColumnNhapSoLuongNhap
             // 
@@ -310,7 +310,7 @@ namespace DXApplication1
             this.ColumnNhapSoLuongNhap.OptionsColumn.AllowEdit = false;
             this.ColumnNhapSoLuongNhap.Visible = true;
             this.ColumnNhapSoLuongNhap.VisibleIndex = 4;
-            this.ColumnNhapSoLuongNhap.Width = 83;
+            this.ColumnNhapSoLuongNhap.Width = 70;
             // 
             // ColumnNhapGiaNhap
             // 
@@ -320,7 +320,7 @@ namespace DXApplication1
             this.ColumnNhapGiaNhap.OptionsColumn.AllowEdit = false;
             this.ColumnNhapGiaNhap.Visible = true;
             this.ColumnNhapGiaNhap.VisibleIndex = 5;
-            this.ColumnNhapGiaNhap.Width = 73;
+            this.ColumnNhapGiaNhap.Width = 62;
             // 
             // ColumnNhapGiaBan
             // 
@@ -330,7 +330,7 @@ namespace DXApplication1
             this.ColumnNhapGiaBan.OptionsColumn.AllowEdit = false;
             this.ColumnNhapGiaBan.Visible = true;
             this.ColumnNhapGiaBan.VisibleIndex = 6;
-            this.ColumnNhapGiaBan.Width = 73;
+            this.ColumnNhapGiaBan.Width = 62;
             // 
             // gridNhapThanhTien
             // 
@@ -340,6 +340,7 @@ namespace DXApplication1
             this.gridNhapThanhTien.OptionsColumn.AllowEdit = false;
             this.gridNhapThanhTien.Visible = true;
             this.gridNhapThanhTien.VisibleIndex = 7;
+            this.gridNhapThanhTien.Width = 82;
             // 
             // gridKho
             // 
@@ -373,7 +374,7 @@ namespace DXApplication1
             this.ColumnMaPT.OptionsColumn.AllowEdit = false;
             this.ColumnMaPT.Visible = true;
             this.ColumnMaPT.VisibleIndex = 0;
-            this.ColumnMaPT.Width = 74;
+            this.ColumnMaPT.Width = 65;
             // 
             // ColumnTenPT
             // 
@@ -383,7 +384,7 @@ namespace DXApplication1
             this.ColumnTenPT.OptionsColumn.AllowEdit = false;
             this.ColumnTenPT.Visible = true;
             this.ColumnTenPT.VisibleIndex = 1;
-            this.ColumnTenPT.Width = 104;
+            this.ColumnTenPT.Width = 156;
             // 
             // ColumnXuatXu
             // 
@@ -393,7 +394,7 @@ namespace DXApplication1
             this.ColumnXuatXu.OptionsColumn.AllowEdit = false;
             this.ColumnXuatXu.Visible = true;
             this.ColumnXuatXu.VisibleIndex = 2;
-            this.ColumnXuatXu.Width = 81;
+            this.ColumnXuatXu.Width = 84;
             // 
             // ColumnThuongHieu
             // 
@@ -403,6 +404,7 @@ namespace DXApplication1
             this.ColumnThuongHieu.OptionsColumn.AllowEdit = false;
             this.ColumnThuongHieu.Visible = true;
             this.ColumnThuongHieu.VisibleIndex = 3;
+            this.ColumnThuongHieu.Width = 77;
             // 
             // ColumnSoLuong
             // 
@@ -412,7 +414,7 @@ namespace DXApplication1
             this.ColumnSoLuong.OptionsColumn.AllowEdit = false;
             this.ColumnSoLuong.Visible = true;
             this.ColumnSoLuong.VisibleIndex = 4;
-            this.ColumnSoLuong.Width = 60;
+            this.ColumnSoLuong.Width = 62;
             // 
             // ColumnGiaNhap
             // 
@@ -422,7 +424,7 @@ namespace DXApplication1
             this.ColumnGiaNhap.OptionsColumn.AllowEdit = false;
             this.ColumnGiaNhap.Visible = true;
             this.ColumnGiaNhap.VisibleIndex = 5;
-            this.ColumnGiaNhap.Width = 60;
+            this.ColumnGiaNhap.Width = 62;
             // 
             // ColumnGiaBan
             // 
@@ -432,7 +434,7 @@ namespace DXApplication1
             this.ColumnGiaBan.OptionsColumn.AllowEdit = false;
             this.ColumnGiaBan.Visible = true;
             this.ColumnGiaBan.VisibleIndex = 6;
-            this.ColumnGiaBan.Width = 73;
+            this.ColumnGiaBan.Width = 86;
             // 
             // txtTienNhap
             // 
@@ -570,6 +572,15 @@ namespace DXApplication1
             this.txtGiaBan.StyleController = this.layoutControl1;
             this.txtGiaBan.TabIndex = 10;
             // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Enabled = false;
+            this.txtSoLuong.Location = new System.Drawing.Point(103, 527);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(514, 20);
+            this.txtSoLuong.StyleController = this.layoutControl1;
+            this.txtSoLuong.TabIndex = 19;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -698,6 +709,15 @@ namespace DXApplication1
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.txtSoLuongNhap;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(631, 24);
+            this.layoutControlItem6.Text = "Số lượng nhập:";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(76, 13);
+            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.CustomizationFormText = "layoutControlGroup2";
@@ -795,24 +815,6 @@ namespace DXApplication1
             this.layoutControlItem19.Text = "Thương hiệu:";
             this.layoutControlItem19.TextSize = new System.Drawing.Size(76, 13);
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.txtSoLuongNhap;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(631, 24);
-            this.layoutControlItem6.Text = "Số lượng nhập:";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(76, 13);
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Enabled = false;
-            this.txtSoLuong.Location = new System.Drawing.Point(103, 527);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(514, 20);
-            this.txtSoLuong.StyleController = this.layoutControl1;
-            this.txtSoLuong.TabIndex = 19;
-            // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.txtSoLuong;
@@ -850,6 +852,7 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.txtThuongHieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaBan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -862,6 +865,7 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
@@ -871,8 +875,6 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             this.ResumeLayout(false);
 

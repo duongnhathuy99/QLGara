@@ -11,10 +11,10 @@ namespace BUS
     public class BUS_PhieuSuaChua
     {
         DAL_PhieuSuaChua dal_psc = new DAL_PhieuSuaChua();
-        /*public List<DTO_NhapPhuTung> select()
+        public List<DTO_PhieuSuaChua> select1()
         {
-            return dal_psc.select();
-        }*/
+            return dal_psc.select1();
+        }
         public int taoIDPSC()
         {
             return dal_psc.slPSC();

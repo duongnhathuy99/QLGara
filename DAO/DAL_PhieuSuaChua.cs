@@ -47,7 +47,7 @@ namespace DAL
         }
         public bool ThemPSC(DTO_PhieuSuaChua psc)
         {
-            string s = "INSERT INTO PhieuSuaChua VALUES('" + psc.MaPhieu + "','" + psc.NgayLapPhieu + "','" + psc.NgayBanGiao + "',N'" + psc.GhiChu + "','" + psc.TienSuaChua + "',N'" + psc.TrangThaiThanhToan + "','" + psc.TaiKhoan + "','" + psc.KhachHang.MaKH + "');";
+            string s = "INSERT INTO PhieuSuaChua VALUES('" + psc.MaPhieu + "','" + psc.NgayLapPhieu + "','" + psc.NgayBanGiao + "',N'" + psc.GhiChu + "','" + psc.TienSuaChua + "',N'" + psc.TrangThaiThanhToan + "','" + psc.NhanVien.TaiKhoan + "','" + psc.KhachHang.MaKH + "');";
             s += " UPDATE SoLuongID SET soLuongPSC = soLuongPSC + 1";
             return Connect.ExcuteNonQuery(s);
 

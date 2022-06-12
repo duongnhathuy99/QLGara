@@ -18,9 +18,11 @@ namespace DXApplication1
         BUS_PhuTung bus_pt = new BUS_PhuTung();
         private bool IsThem = false;
         private bool IsSua = false;
-        public Kho()
+        DTO_NhanVien nv = new DTO_NhanVien();
+        public Kho(DTO_NhanVien Nv)
         {
             InitializeComponent();
+            nv = Nv;        
         }
         private void EnabledTextBox(bool flag)
         {
@@ -102,7 +104,7 @@ namespace DXApplication1
 
         private void btnNhapPT_Click(object sender, EventArgs e)
         {
-            Nhapphutung form = new Nhapphutung();
+            Nhapphutung form = new Nhapphutung(nv);
             form.Show();
             form.FormClosed += new FormClosedEventHandler(NhapPT_FormClosed);
         }

@@ -15,15 +15,18 @@ namespace DXApplication1
     public partial class Nhapphutung : DevExpress.XtraEditors.XtraForm
     {
         DTO_NhapPhuTung npt = new DTO_NhapPhuTung();
+        DTO_NhanVien nv = new DTO_NhanVien();
         BUS_CTNhapPT bus_ct_npt = new BUS_CTNhapPT();
         BUS_NhapPhuTung bus_npt = new BUS_NhapPhuTung();
         BUS_PhuTung bus_pt = new BUS_PhuTung();
         BUS_NhaCungCap bus_ncc = new BUS_NhaCungCap();
         private bool IsThem = false;
         List<DTO_PhuTung> listPT = new List<DTO_PhuTung>();       
-        public Nhapphutung()
+        public Nhapphutung(DTO_NhanVien Nv)
         {
             InitializeComponent();
+            nv = Nv;
+            txtTenNV.Text =nv.TenNV;
         }
 
         private void Nhapphutung_Load(object sender, EventArgs e)
@@ -179,11 +182,13 @@ namespace DXApplication1
         {
             if (listPT != null && cbNhaCungCap.Text!="")
             {
-                DTO_NhapPhuTung npt = new DTO_NhapPhuTung();
+                DTO_NhapPhuTung npt = new DTO_NhapPhuTung();              
+                DTO_NhaCungCap ncc = new DTO_NhaCungCap();
                 npt.MaNhap = txtMaNhap.Text;
                 npt.NgayNhap = DateTime.Parse(dtNgayNhap.Text);
-                npt.MaNCC = bus_ncc.getMaNCC(cbNhaCungCap.Text);
-                npt.TaiKhoan = "admin";
+                ncc.MaNCC = bus_ncc.getMaNCC(cbNhaCungCap.Text);
+                npt.NhaCungCap = ncc;
+                npt.NhanVien = nv;
                 npt.TienNhap = int.Parse(txtTienNhap.Text);
                 List<DTO_CTNhap_PhuTung> ctn = new List<DTO_CTNhap_PhuTung>();
                 foreach (var item in listPT)

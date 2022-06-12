@@ -250,6 +250,7 @@ namespace DXApplication1
             this.ColumnMatKhau.Caption = "Mật Khẩu";
             this.ColumnMatKhau.FieldName = "MatKhau";
             this.ColumnMatKhau.Name = "ColumnMatKhau";
+            this.ColumnMatKhau.OptionsColumn.AllowEdit = false;
             this.ColumnMatKhau.Visible = true;
             this.ColumnMatKhau.VisibleIndex = 1;
             // 

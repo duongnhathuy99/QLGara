@@ -12,7 +12,9 @@ namespace DAL
     {
         public List<DTO_NhapPhuTung> select()
         {
-            string s = "select * from NhapPhuTung";
+            string s = "select npt.*, ncc.tenNCC,nv.tenNV";
+            s += " from NhapPhuTung npt, NhaCungCap ncc,NhanVien nv";
+            s += " where npt.maNCC=ncc.maNCC and npt.taiKhoan=nv.taiKhoan";
             DataTable dt = Connect.ExcecuteQuery(s);
             List<DTO_NhapPhuTung> list = new List<DTO_NhapPhuTung>();
             if (dt.Rows.Count > 0)
@@ -20,10 +22,14 @@ namespace DAL
                 foreach (DataRow row in dt.Rows)
                 {                 
                     DTO_NhapPhuTung Npt = new DTO_NhapPhuTung();
+                    DTO_NhanVien nv = new DTO_NhanVien();
+                    DTO_NhaCungCap ncc = new DTO_NhaCungCap();
                     Npt.MaNhap = row["maNhap"].ToString();
-                    Npt.TaiKhoan = row["taiKhoan"].ToString();
+                    nv.TenNV = row["tenNV"].ToString();
+                    Npt.NhanVien = nv;
                     Npt.NgayNhap = DateTime.Parse(row["ngayNhap"].ToString());
-                    Npt.MaNCC = row["maNCC"].ToString();
+                    ncc.TenNCC = row["tenNCC"].ToString();
+                    Npt.NhaCungCap = ncc;
                     Npt.TienNhap = int.Parse(row["tienNhap"].ToString());                   
                     list.Add(Npt);
                 }
@@ -42,7 +48,7 @@ namespace DAL
         }
         public bool ThemNPT(DTO_NhapPhuTung Npt)
         {
-            string s = "INSERT INTO NhapPhuTung VALUES('" + Npt.MaNhap + "',N'" + Npt.NgayNhap + "',N'" + Npt.TienNhap + "','" + Npt.TaiKhoan + "','" + Npt.MaNCC + " ');";
+            string s = "INSERT INTO NhapPhuTung VALUES('" + Npt.MaNhap + "',N'" + Npt.NgayNhap + "',N'" + Npt.TienNhap + "','" + Npt.NhanVien.TaiKhoan + "','" + Npt.NhaCungCap.MaNCC + " ');";
             s += " UPDATE SoLuongID SET soLuongNPT = soLuongNPT + 1";
             return Connect.ExcuteNonQuery(s);
 

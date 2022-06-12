@@ -41,7 +41,7 @@ namespace DXApplication1
                     frm.Dispose();                 
                 }
             }
-            Phieusuachua f = new Phieusuachua();
+            Phieusuachua f = new Phieusuachua(nv);
             f.laykh(kh);
             OpenChildForm(f);            
         }
@@ -53,13 +53,13 @@ namespace DXApplication1
         }
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Phieusuachua f = new Phieusuachua();       
+            Phieusuachua f = new Phieusuachua(nv);       
             OpenChildForm(f);           
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Kho f = new Kho();
+            Kho f = new Kho(nv);
 
             OpenChildForm(f);
         }
@@ -80,7 +80,7 @@ namespace DXApplication1
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ThanhToan f = new ThanhToan();
+            ThanhToan f = new ThanhToan(nv);
 
             OpenChildForm(f);
         }    
@@ -102,6 +102,36 @@ namespace DXApplication1
             HoaDon f = new HoaDon();
 
             OpenChildForm(f);          
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            switch (nv.MaCV)
+            {
+                case "CV2":
+                    barButtonItem3.Enabled = false;
+                    barButtonItem4.Enabled = false;
+                    barButtonItem9.Enabled = false;
+                    barButtonItem6.Enabled = false;
+                    barButtonItem10.Enabled = false;
+                    barButtonItem5.Enabled = false;
+                    break;
+                case "CV3":
+                    barButtonItem1.Enabled = false;
+                    barButtonItem2.Enabled = false;
+                    barButtonItem6.Enabled = false;
+                    barButtonItem10.Enabled = false;
+                    barButtonItem5.Enabled = false;
+                    break;
+                case "CV4":
+                    barButtonItem1.Enabled = false;
+                    barButtonItem2.Enabled = false;
+                    barButtonItem3.Enabled = false;
+                    barButtonItem4.Enabled = false;
+                    barButtonItem9.Enabled = false;
+                    barButtonItem5.Enabled = false;
+                    break;
+            }
         }
     }
 }

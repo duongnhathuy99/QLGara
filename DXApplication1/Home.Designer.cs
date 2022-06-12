@@ -176,14 +176,14 @@ namespace DXApplication1
             this.ribbonPageGroup4,
             this.ribbonPageGroup5});
             this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Text = "Quản lý gara";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Lập phiếu sửa chữa";
             // 
             // ribbonPageGroup2
             // 
@@ -191,27 +191,27 @@ namespace DXApplication1
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Quản lý kho";
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Quản lý hóa đơn";
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "QL nhân viên";
             // 
             // ribbonPageGroup5
             // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Giao diện";
             // 
             // documentManager1
             // 
@@ -230,11 +230,13 @@ namespace DXApplication1
             // 
             // lbTen
             // 
-            this.lbTen.Location = new System.Drawing.Point(1066, 64);
+            this.lbTen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lbTen.Appearance.Options.UseFont = true;
+            this.lbTen.Location = new System.Drawing.Point(968, 64);
             this.lbTen.Name = "lbTen";
-            this.lbTen.Size = new System.Drawing.Size(43, 13);
+            this.lbTen.Size = new System.Drawing.Size(53, 13);
             this.lbTen.TabIndex = 2;
-            this.lbTen.Text = "Xin chào ";
+            this.lbTen.Text = "Xin chào, ";
             // 
             // Home
             // 
@@ -247,6 +249,7 @@ namespace DXApplication1
             this.Name = "Home";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Quản lý gara";
+            this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();

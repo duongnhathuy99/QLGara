@@ -11,10 +11,10 @@ namespace BUS
     public class BUS_HoaDon
     {
         DAL_HoaDon dal_hd = new DAL_HoaDon();
-        /*public List<DTO_PhieuSuaChua> select1()
+        public List<DTO_HoaDon> select()
         {
-            return dal_psc.select1();
-        }*/
+            return dal_hd.select();
+        }
         public int taoIDHD()
         {
             return dal_hd.slHD();

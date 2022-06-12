@@ -18,9 +18,12 @@ namespace DXApplication1
         BUS_PhieuSuaChua bus_psc = new BUS_PhieuSuaChua();
         BUS_HoaDon bus_hd = new BUS_HoaDon();
         List<DTO_PhieuSuaChua> psc = new List<DTO_PhieuSuaChua>();
-        public ThanhToan()
+        DTO_NhanVien nv = new DTO_NhanVien();
+        public ThanhToan(DTO_NhanVien Nv)
         {
             InitializeComponent();
+            nv = Nv;
+            txtTenNV.Text = nv.TenNV;
         }
 
         private void ThanhToan_Load(object sender, EventArgs e)
@@ -72,9 +75,11 @@ namespace DXApplication1
         private void btnThanhToanTienMat_Click(object sender, EventArgs e)
         {
             DTO_HoaDon hd = new DTO_HoaDon();
+            DTO_NhanVien nv = new DTO_NhanVien();
             hd.MaHD = txtMaHD.Text;
             hd.NgayThanhToan = DateTime.Parse(dtThanhToan.Text);
-            hd.TaiKhoan = "admin";
+            nv.TaiKhoan = "admin";
+            hd.NhanVien = nv;
             hd.HinhThucThanhToan = "Tiền mặt";
             DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
             psc.MaPhieu = txtMaPhieu.Text;
@@ -94,10 +99,10 @@ namespace DXApplication1
 
         private void btnThanhToanThe_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon hd = new DTO_HoaDon();
+            DTO_HoaDon hd = new DTO_HoaDon();          
             hd.MaHD = txtMaHD.Text;
             hd.NgayThanhToan = DateTime.Parse(dtThanhToan.Text);
-            hd.TaiKhoan = "admin";
+            hd.NhanVien = nv;
             hd.HinhThucThanhToan = "Thẻ ATM";
             DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
             psc.MaPhieu = txtMaPhieu.Text;

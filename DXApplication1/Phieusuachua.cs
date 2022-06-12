@@ -17,11 +17,12 @@ namespace DXApplication1
     {
         List<DTO_PT_DV> listChon = new List<DTO_PT_DV>();
         BUS_PhieuSuaChua bus_psc = new BUS_PhieuSuaChua();
-        public Phieusuachua()
+        DTO_NhanVien nv = new DTO_NhanVien();
+        public Phieusuachua(DTO_NhanVien Nv)
         {
             InitializeComponent();
-
-
+            nv = Nv;
+            txtTenNV.Text = nv.TenNV;
         }
         public void GetListChon(List<DTO_PT_DV> list)
         {
@@ -105,7 +106,7 @@ namespace DXApplication1
                 psc.MaPhieu = txtMaPhieu.Text;
                 psc.NgayBanGiao = DateTime.Parse(dateBanGiao.Text);
                 psc.NgayLapPhieu = DateTime.Parse(dateLapPhieu.Text);
-                psc.TaiKhoan = "admin";
+                psc.NhanVien = nv;
                 psc.TienSuaChua = int.Parse(txtTongTien.Text);
                 psc.TrangThaiThanhToan = "Chưa thanh Toán";
                 psc.GhiChu = txtGhiChu.Text;

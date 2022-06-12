@@ -9,7 +9,7 @@ namespace DTO
    public class DTO_PhieuSuaChua
     {
         public string MaPhieu { get; set; }
-        public string TaiKhoan { get; set; }
+        public DTO_NhanVien NhanVien { get; set; }
         public DTO_KhachHang KhachHang { get; set; }
         public DateTime NgayLapPhieu { get; set; }
         public int TienSuaChua { get; set; }    

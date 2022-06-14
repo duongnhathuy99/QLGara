@@ -23,10 +23,12 @@ namespace DAL
                 DataTable kq = new DataTable();
                 dt.Fill(kq);
                 cn.Close();
+
                 return kq;
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.ToString());
                 DataTable dt = new DataTable();
                 return dt;
             }

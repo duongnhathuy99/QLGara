@@ -232,7 +232,7 @@ namespace DXApplication1
             // 
             this.lbTen.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.lbTen.Appearance.Options.UseFont = true;
-            this.lbTen.Location = new System.Drawing.Point(968, 64);
+            this.lbTen.Location = new System.Drawing.Point(637, 65);
             this.lbTen.Name = "lbTen";
             this.lbTen.Size = new System.Drawing.Size(53, 13);
             this.lbTen.TabIndex = 2;

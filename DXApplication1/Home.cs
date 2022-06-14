@@ -41,7 +41,7 @@ namespace DXApplication1
                     frm.Dispose();                 
                 }
             }
-            Phieusuachua f = new Phieusuachua(nv);
+            LapPhieuSuaChua f = new LapPhieuSuaChua(nv);
             f.laykh(kh);
             OpenChildForm(f);            
         }
@@ -53,7 +53,8 @@ namespace DXApplication1
         }
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Phieusuachua f = new Phieusuachua(nv);       
+            //LapPhieuSuaChua f = new LapPhieuSuaChua(nv);
+            PhieuSuaChua f = new PhieuSuaChua();
             OpenChildForm(f);           
         }
 

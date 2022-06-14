@@ -402,7 +402,7 @@ namespace DXApplication1
             this.ClientSize = new System.Drawing.Size(1017, 474);
             this.Controls.Add(this.layoutControl1);
             this.Name = "DichVu";
-            this.Text = "Dichvu";
+            this.Text = "Dịch vụ";
             this.Load += new System.EventHandler(this.DichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

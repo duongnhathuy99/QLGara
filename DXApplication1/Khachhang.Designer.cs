@@ -487,7 +487,7 @@ namespace DXApplication1
             this.ClientSize = new System.Drawing.Size(953, 509);
             this.Controls.Add(this.layoutControl1);
             this.Name = "KhachHang";
-            this.Text = "Khachhang";
+            this.Text = "Khách Hàng";
             this.Load += new System.EventHandler(this.KhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

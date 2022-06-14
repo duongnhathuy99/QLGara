@@ -15,6 +15,14 @@ namespace BUS
         {
             return dal_psc.select1();
         }
+        public List<DTO_PhieuSuaChua> select2()
+        {
+            return dal_psc.select2();
+        }
+        public List<DTO_PT_DV> select3(string MaPSC)
+        {
+            return dal_psc.select3(MaPSC);
+        }
         public int taoIDPSC()
         {
             return dal_psc.slPSC();

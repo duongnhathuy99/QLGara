@@ -365,7 +365,7 @@ namespace DXApplication1
             this.ClientSize = new System.Drawing.Size(876, 471);
             this.Controls.Add(this.layoutControl1);
             this.Name = "NhaCungCap";
-            this.Text = "NhaCungCap";
+            this.Text = "Nhà Cung Cấp";
             this.Load += new System.EventHandler(this.NhaCungCap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridNhaCungCap)).EndInit();

@@ -329,7 +329,7 @@ namespace DXApplication1
             this.ClientSize = new System.Drawing.Size(892, 454);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "HoaDon";
-            this.Text = "HoaDon";
+            this.Text = "Hóa Đơn";
             this.Load += new System.EventHandler(this.HoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);

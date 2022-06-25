@@ -52,7 +52,6 @@ namespace DXApplication1
             this.dateLapPhieu = new DevExpress.XtraEditors.DateEdit();
             this.dateBanGiao = new DevExpress.XtraEditors.DateEdit();
             this.txtTenNV = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtHieuXe = new DevExpress.XtraEditors.TextEdit();
             this.txtBienSo = new DevExpress.XtraEditors.TextEdit();
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
@@ -69,7 +68,6 @@ namespace DXApplication1
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -112,7 +110,6 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
@@ -138,7 +135,6 @@ namespace DXApplication1
             this.layoutControl1.Controls.Add(this.dateLapPhieu);
             this.layoutControl1.Controls.Add(this.dateBanGiao);
             this.layoutControl1.Controls.Add(this.txtTenNV);
-            this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.txtHieuXe);
             this.layoutControl1.Controls.Add(this.txtBienSo);
             this.layoutControl1.Controls.Add(this.txtDiaChi);
@@ -156,7 +152,7 @@ namespace DXApplication1
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
             this.simpleButton3.Location = new System.Drawing.Point(475, 390);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(290, 36);
+            this.simpleButton3.Size = new System.Drawing.Size(530, 36);
             this.simpleButton3.StyleController = this.layoutControl1;
             this.simpleButton3.TabIndex = 14;
             this.simpleButton3.Text = "Chọn dịch vụ - phụ tùng";
@@ -357,16 +353,6 @@ namespace DXApplication1
             this.txtTenNV.StyleController = this.layoutControl1;
             this.txtTenNV.TabIndex = 6;
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(769, 390);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(236, 36);
-            this.simpleButton1.StyleController = this.layoutControl1;
-            this.simpleButton1.TabIndex = 9;
-            this.simpleButton1.Text = "Báo giá";
-            // 
             // txtHieuXe
             // 
             this.txtHieuXe.Enabled = false;
@@ -411,7 +397,6 @@ namespace DXApplication1
             this.layoutControlItem18,
             this.layoutControlGroup2,
             this.layoutControlItem14,
-            this.layoutControlItem13,
             this.layoutControlItem2,
             this.layoutControlGroup1});
             this.Root.Name = "Root";
@@ -423,7 +408,7 @@ namespace DXApplication1
             this.layoutControlItem18.Control = this.simpleButton3;
             this.layoutControlItem18.Location = new System.Drawing.Point(463, 378);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(294, 40);
+            this.layoutControlItem18.Size = new System.Drawing.Size(534, 40);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
@@ -539,15 +524,6 @@ namespace DXApplication1
             this.layoutControlItem14.Size = new System.Drawing.Size(534, 53);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
-            // 
-            // layoutControlItem13
-            // 
-            this.layoutControlItem13.Control = this.simpleButton1;
-            this.layoutControlItem13.Location = new System.Drawing.Point(757, 378);
-            this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(240, 40);
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem13.TextVisible = false;
             // 
             // layoutControlItem2
             // 
@@ -685,7 +661,6 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
@@ -720,9 +695,7 @@ namespace DXApplication1
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraEditors.TextEdit txtTenNV;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraEditors.SimpleButton btnLapPhieu;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;

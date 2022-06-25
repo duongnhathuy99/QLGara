@@ -43,7 +43,7 @@ namespace DAL
         }
         public bool ThemKH(DTO_KhachHang Kh)
         {
-            string s = "INSERT INTO KhachHang VALUES('" + Kh.MaKH + "',N'" + Kh.TenKH + "',N'" + Kh.DiaChi + "','" + Kh.SDT + "','" + Kh.HieuXe + "','" + Kh.BienSo + " ');";
+            string s = "INSERT INTO KhachHang VALUES('" + Kh.MaKH + "',N'" + Kh.TenKH + "','" + Kh.SDT + "',N'" + Kh.DiaChi + "','" + Kh.HieuXe + "','" + Kh.BienSo + " ');";
             s += "UPDATE SoLuongID SET soLuongKH = soLuongKH + 1";
             return Connect.ExcuteNonQuery(s);
 

@@ -29,6 +29,7 @@ namespace DXApplication1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuSuaChua));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txtBienSo = new DevExpress.XtraEditors.TextEdit();
             this.txtHieuXe = new DevExpress.XtraEditors.TextEdit();
@@ -76,6 +77,10 @@ namespace DXApplication1
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBienSo.Properties)).BeginInit();
@@ -107,10 +112,14 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.simpleButton2);
+            this.layoutControl1.Controls.Add(this.simpleButton1);
             this.layoutControl1.Controls.Add(this.txtBienSo);
             this.layoutControl1.Controls.Add(this.txtHieuXe);
             this.layoutControl1.Controls.Add(this.txtSdt);
@@ -208,7 +217,7 @@ namespace DXApplication1
             this.gridPT_DV.Location = new System.Drawing.Point(689, 294);
             this.gridPT_DV.MainView = this.gridView2;
             this.gridPT_DV.Name = "gridPT_DV";
-            this.gridPT_DV.Size = new System.Drawing.Size(529, 271);
+            this.gridPT_DV.Size = new System.Drawing.Size(529, 191);
             this.gridPT_DV.TabIndex = 5;
             this.gridPT_DV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -234,6 +243,7 @@ namespace DXApplication1
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 0;
+            this.gridColumn8.Width = 51;
             // 
             // gridColumn9
             // 
@@ -243,6 +253,7 @@ namespace DXApplication1
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 1;
+            this.gridColumn9.Width = 115;
             // 
             // gridColumn10
             // 
@@ -252,6 +263,7 @@ namespace DXApplication1
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 2;
+            this.gridColumn10.Width = 63;
             // 
             // gridColumn11
             // 
@@ -261,6 +273,7 @@ namespace DXApplication1
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 3;
+            this.gridColumn11.Width = 63;
             // 
             // gridColumn12
             // 
@@ -270,6 +283,7 @@ namespace DXApplication1
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 4;
+            this.gridColumn12.Width = 70;
             // 
             // gridColumn13
             // 
@@ -279,6 +293,7 @@ namespace DXApplication1
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 5;
+            this.gridColumn13.Width = 61;
             // 
             // gridColumn14
             // 
@@ -288,6 +303,7 @@ namespace DXApplication1
             this.gridColumn14.OptionsColumn.AllowEdit = false;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 6;
+            this.gridColumn14.Width = 81;
             // 
             // gridPhieuSuaChua
             // 
@@ -324,7 +340,7 @@ namespace DXApplication1
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 44;
+            this.gridColumn1.Width = 48;
             // 
             // gridColumn2
             // 
@@ -334,7 +350,7 @@ namespace DXApplication1
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 60;
+            this.gridColumn2.Width = 66;
             // 
             // gridColumn7
             // 
@@ -344,7 +360,7 @@ namespace DXApplication1
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 2;
-            this.gridColumn7.Width = 56;
+            this.gridColumn7.Width = 61;
             // 
             // gridColumn15
             // 
@@ -354,7 +370,7 @@ namespace DXApplication1
             this.gridColumn15.OptionsColumn.AllowEdit = false;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 3;
-            this.gridColumn15.Width = 43;
+            this.gridColumn15.Width = 47;
             // 
             // gridColumn16
             // 
@@ -364,7 +380,7 @@ namespace DXApplication1
             this.gridColumn16.OptionsColumn.AllowEdit = false;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 4;
-            this.gridColumn16.Width = 52;
+            this.gridColumn16.Width = 57;
             // 
             // gridColumn17
             // 
@@ -374,6 +390,7 @@ namespace DXApplication1
             this.gridColumn17.OptionsColumn.AllowEdit = false;
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 5;
+            this.gridColumn17.Width = 95;
             // 
             // gridColumn3
             // 
@@ -383,7 +400,7 @@ namespace DXApplication1
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 6;
-            this.gridColumn3.Width = 60;
+            this.gridColumn3.Width = 70;
             // 
             // gridColumn4
             // 
@@ -393,7 +410,7 @@ namespace DXApplication1
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 7;
-            this.gridColumn4.Width = 60;
+            this.gridColumn4.Width = 70;
             // 
             // gridColumn5
             // 
@@ -403,7 +420,7 @@ namespace DXApplication1
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 8;
-            this.gridColumn5.Width = 80;
+            this.gridColumn5.Width = 74;
             // 
             // gridColumn6
             // 
@@ -413,7 +430,7 @@ namespace DXApplication1
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 9;
-            this.gridColumn6.Width = 57;
+            this.gridColumn6.Width = 60;
             // 
             // txtNgayLapPhieu
             // 
@@ -445,7 +462,9 @@ namespace DXApplication1
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlGroup1,
-            this.layoutControlGroup2});
+            this.layoutControlGroup2,
+            this.layoutControlItem13,
+            this.layoutControlItem14});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1230, 577);
             this.Root.TextVisible = false;
@@ -464,7 +483,7 @@ namespace DXApplication1
             this.layoutControlItem2.Control = this.gridPT_DV;
             this.layoutControlItem2.Location = new System.Drawing.Point(677, 282);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(533, 275);
+            this.layoutControlItem2.Size = new System.Drawing.Size(533, 195);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -584,6 +603,44 @@ namespace DXApplication1
             this.layoutControlItem12.Text = "Biển số:";
             this.layoutControlItem12.TextSize = new System.Drawing.Size(80, 13);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(689, 489);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(529, 36);
+            this.simpleButton1.StyleController = this.layoutControl1;
+            this.simpleButton1.TabIndex = 16;
+            this.simpleButton1.Text = "Sửa";
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.simpleButton1;
+            this.layoutControlItem13.Location = new System.Drawing.Point(677, 477);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(533, 40);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem13.TextVisible = false;
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(689, 529);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(529, 36);
+            this.simpleButton2.StyleController = this.layoutControl1;
+            this.simpleButton2.TabIndex = 17;
+            this.simpleButton2.Text = "Xuất danh sách phiếu sửa chữa";
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.simpleButton2;
+            this.layoutControlItem14.Location = new System.Drawing.Point(677, 517);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(533, 40);
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem14.TextVisible = false;
+            // 
             // PhieuSuaChua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +681,8 @@ namespace DXApplication1
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,5 +736,9 @@ namespace DXApplication1
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraEditors.TextEdit txtNgayLapPhieu;
         private DevExpress.XtraEditors.TextEdit txtNgayBanGiao;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
     }
 }

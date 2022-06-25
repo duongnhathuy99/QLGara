@@ -158,7 +158,7 @@ namespace DXApplication1
             this.ColumnMaKH.OptionsColumn.AllowEdit = false;
             this.ColumnMaKH.Visible = true;
             this.ColumnMaKH.VisibleIndex = 0;
-            this.ColumnMaKH.Width = 93;
+            this.ColumnMaKH.Width = 52;
             // 
             // ColumnTenKH
             // 
@@ -168,7 +168,7 @@ namespace DXApplication1
             this.ColumnTenKH.OptionsColumn.AllowEdit = false;
             this.ColumnTenKH.Visible = true;
             this.ColumnTenKH.VisibleIndex = 1;
-            this.ColumnTenKH.Width = 88;
+            this.ColumnTenKH.Width = 96;
             // 
             // ColumnSdt
             // 
@@ -178,7 +178,6 @@ namespace DXApplication1
             this.ColumnSdt.OptionsColumn.AllowEdit = false;
             this.ColumnSdt.Visible = true;
             this.ColumnSdt.VisibleIndex = 3;
-            this.ColumnSdt.Width = 73;
             // 
             // ColumnDiaChi
             // 
@@ -188,7 +187,7 @@ namespace DXApplication1
             this.ColumnDiaChi.OptionsColumn.AllowEdit = false;
             this.ColumnDiaChi.Visible = true;
             this.ColumnDiaChi.VisibleIndex = 2;
-            this.ColumnDiaChi.Width = 73;
+            this.ColumnDiaChi.Width = 121;
             // 
             // ColumnHieuXe
             // 
@@ -198,7 +197,7 @@ namespace DXApplication1
             this.ColumnHieuXe.OptionsColumn.AllowEdit = false;
             this.ColumnHieuXe.Visible = true;
             this.ColumnHieuXe.VisibleIndex = 4;
-            this.ColumnHieuXe.Width = 73;
+            this.ColumnHieuXe.Width = 60;
             // 
             // ColumnBienSo
             // 
@@ -208,7 +207,6 @@ namespace DXApplication1
             this.ColumnBienSo.OptionsColumn.AllowEdit = false;
             this.ColumnBienSo.Visible = true;
             this.ColumnBienSo.VisibleIndex = 5;
-            this.ColumnBienSo.Width = 79;
             // 
             // bandedGridView1
             // 

@@ -65,7 +65,7 @@ namespace DAL
         public bool SuaNV(DTO_NhanVien Nv)
         {
             string s = "UPDATE NhanVien";
-            s += " SET matKhau='" + Nv.MatKhau + "',tenNV=N'" + Nv.TenNV + "',sdt='" + Nv.SDT + "',diaChi=N'" + Nv.DiaChi + "',email='" + Nv.Email + "',maCV='" + Nv.MaCV + "'";
+            s += " SET matKhau='" + Nv.MatKhau + "',tenNV=N'" + Nv.TenNV + "',sdt='" + Nv.SDT + "',diaChi=N'" + Nv.DiaChi + "',email='" + Nv.Email + "'";
             s += " WHERE taiKhoan = '" + Nv.TaiKhoan + "'";
             return Connect.ExcuteNonQuery(s);
         }

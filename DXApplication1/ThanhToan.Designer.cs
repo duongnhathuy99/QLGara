@@ -270,6 +270,7 @@ namespace DXApplication1
             this.txtTienNhap.Size = new System.Drawing.Size(204, 20);
             this.txtTienNhap.StyleController = this.layoutControl1;
             this.txtTienNhap.TabIndex = 6;
+            this.txtTienNhap.EditValueChanged += new System.EventHandler(this.txtTienNhap_EditValueChanged);
             // 
             // txtTenNV
             // 

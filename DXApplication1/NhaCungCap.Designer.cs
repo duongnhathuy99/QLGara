@@ -116,7 +116,7 @@ namespace DXApplication1
             this.ColumnMaNCC.OptionsColumn.AllowEdit = false;
             this.ColumnMaNCC.Visible = true;
             this.ColumnMaNCC.VisibleIndex = 0;
-            this.ColumnMaNCC.Width = 89;
+            this.ColumnMaNCC.Width = 78;
             // 
             // ColumnTenNCC
             // 
@@ -126,7 +126,7 @@ namespace DXApplication1
             this.ColumnTenNCC.OptionsColumn.AllowEdit = false;
             this.ColumnTenNCC.Visible = true;
             this.ColumnTenNCC.VisibleIndex = 1;
-            this.ColumnTenNCC.Width = 161;
+            this.ColumnTenNCC.Width = 165;
             // 
             // ColumnSDT
             // 
@@ -136,7 +136,7 @@ namespace DXApplication1
             this.ColumnSDT.OptionsColumn.AllowEdit = false;
             this.ColumnSDT.Visible = true;
             this.ColumnSDT.VisibleIndex = 2;
-            this.ColumnSDT.Width = 87;
+            this.ColumnSDT.Width = 72;
             // 
             // ColumnDiaChi
             // 
@@ -146,7 +146,7 @@ namespace DXApplication1
             this.ColumnDiaChi.OptionsColumn.AllowEdit = false;
             this.ColumnDiaChi.Visible = true;
             this.ColumnDiaChi.VisibleIndex = 3;
-            this.ColumnDiaChi.Width = 117;
+            this.ColumnDiaChi.Width = 139;
             // 
             // cardView1
             // 

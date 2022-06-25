@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using DevExpress.XtraReports.UI;
 
 namespace DXApplication1
 {
@@ -64,6 +65,8 @@ namespace DXApplication1
             {
                 dtThanhToan.Text = "";
                 txtMaHD.Text = "";
+                txtTienNhap.Text = "";
+                txtTienThua.Text = "";
                 btnTaoHD.Text = "Tạo Hóa Đơn";
                 txtTienNhap.Enabled = false;
                 btnThanhToanTienMat.Enabled = false;
@@ -74,27 +77,32 @@ namespace DXApplication1
 
         private void btnThanhToanTienMat_Click(object sender, EventArgs e)
         {
-            DTO_HoaDon hd = new DTO_HoaDon();
-            DTO_NhanVien nv = new DTO_NhanVien();
-            hd.MaHD = txtMaHD.Text;
-            hd.NgayThanhToan = DateTime.Parse(dtThanhToan.Text);
-            nv.TaiKhoan = "admin";
-            hd.NhanVien = nv;
-            hd.HinhThucThanhToan = "Tiền mặt";
-            DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
-            psc.MaPhieu = txtMaPhieu.Text;
-            hd.PhieuSuaChua = psc;          
-            if (bus_hd.ThemHD(hd))
+            if (int.Parse(txtTienThua.Text) >= 0)
             {
-                Loadfull();
-                MessageBox.Show("Thanh toán thành công");
-                dtThanhToan.Text = "";
-                txtMaHD.Text = "";
-                btnTaoHD.Text = "Tạo Hóa Đơn";
-                txtTienNhap.Enabled = false;
-                btnThanhToanTienMat.Enabled = false;
-                btnThanhToanThe.Enabled = false;
+                DTO_HoaDon hd = new DTO_HoaDon();
+                DTO_NhanVien nv = new DTO_NhanVien();
+                hd.MaHD = txtMaHD.Text;
+                hd.NgayThanhToan = DateTime.Parse(dtThanhToan.Text);
+                nv.TaiKhoan = "admin";
+                hd.NhanVien = nv;
+                hd.HinhThucThanhToan = "Tiền mặt";
+                DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
+                psc.MaPhieu = txtMaPhieu.Text;
+                hd.PhieuSuaChua = psc;
+                if (bus_hd.ThemHD(hd))
+                {
+                    Loadfull();
+                    MessageBox.Show("Thanh toán thành công");
+                    dtThanhToan.Text = "";
+                    txtMaHD.Text = "";
+                    btnTaoHD.Text = "Tạo Hóa Đơn";
+                    txtTienNhap.Enabled = false;
+                    btnThanhToanTienMat.Enabled = false;
+                    btnThanhToanThe.Enabled = false;
+                }
             }
+            else
+                MessageBox.Show("Tiền nhập phải lớn hơn tiền thanh toán");
         }
 
         private void btnThanhToanThe_Click(object sender, EventArgs e)
@@ -118,6 +126,11 @@ namespace DXApplication1
                 btnThanhToanTienMat.Enabled = false;
                 btnThanhToanThe.Enabled = false;
             }
+        }
+
+        private void txtTienNhap_EditValueChanged(object sender, EventArgs e)
+        {
+            txtTienThua.Text = (int.Parse(txtTienNhap.Text) - int.Parse(txtTienSuaChua.Text)).ToString();
         }
     }
 }

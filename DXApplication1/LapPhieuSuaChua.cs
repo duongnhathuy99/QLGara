@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+using DevExpress.XtraReports.UI;
 
 namespace DXApplication1
 {
@@ -18,6 +19,8 @@ namespace DXApplication1
         List<DTO_PT_DV> listChon = new List<DTO_PT_DV>();
         BUS_PhieuSuaChua bus_psc = new BUS_PhieuSuaChua();
         DTO_NhanVien nv = new DTO_NhanVien();
+        DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
+        
         public LapPhieuSuaChua(DTO_NhanVien Nv)
         {
             InitializeComponent();
@@ -102,6 +105,10 @@ namespace DXApplication1
                 DTO_PhieuSuaChua psc = new DTO_PhieuSuaChua();
                 DTO_KhachHang kh = new DTO_KhachHang();
                 kh.MaKH = txtMaKH.Text;
+                kh.BienSo = txtBienSo.Text;
+                kh.HieuXe = txtHieuXe.Text;
+                kh.SDT = txtSdt.Text;
+                kh.TenKH = txtTenKH.Text;
                 psc.KhachHang = kh;
                 psc.MaPhieu = txtMaPhieu.Text;
                 psc.NgayBanGiao = DateTime.Parse(dateBanGiao.Text);
@@ -115,11 +122,14 @@ namespace DXApplication1
                     listChon[i].MaPhieu = psc.MaPhieu;
                 }
                 if (bus_psc.ThemPSC(psc) && bus_psc.ThemCT_PSC(listChon))
-                {               
-                        listChon = null;
-                        MessageBox.Show("Lập phiếu thành công");
-                        XoaTextBox();
-                        Loadfull();                   
+                {                               
+                    //MessageBox.Show("Lập phiếu thành công");
+                    XoaTextBox();
+                    Loadfull();
+                    rptPhieuSuaChua a = new rptPhieuSuaChua(psc,listChon);
+                    ReportPrintTool print = new ReportPrintTool(a);
+                    listChon = null;
+                    print.ShowPreview();
                 }  
             }
             else

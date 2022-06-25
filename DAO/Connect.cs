@@ -45,7 +45,9 @@ namespace DAL
                 return true;
             }
             catch (Exception ex)
-            { return false; }
+            {
+                Console.WriteLine(ex.ToString());
+                return false; }
 
         }
     }

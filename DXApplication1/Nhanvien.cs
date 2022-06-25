@@ -113,6 +113,8 @@ namespace DXApplication1
             {
                 btnSua.Text = "Hủy";
                 EnabledTextBox(true);
+                txtTaiKhoan.Enabled = false;
+                txtChucVu.Enabled = false;
                 IsSua = true;
                 btnThem.Enabled = false;
                 btnXoa.Enabled = false;
@@ -202,5 +204,7 @@ namespace DXApplication1
         {
             Loadfull();
         }
+
+        
     }
 }
